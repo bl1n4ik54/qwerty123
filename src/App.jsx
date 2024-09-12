@@ -4,31 +4,15 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const users = [
+    { name: 'user1', surn: 'surn1', age: 30 },
+    { name: 'user2', surn: 'surn2', age: 31 },
+    { name: 'user3', surn: 'surn3', age: 32 },
+  ];
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count ** 10)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <ul>
+      {users.map((el, i) => <li key={i}>{el.name + " - " + el.surn + " - " + el.age}</li>)}
+      </ul>
   )
 }
 
