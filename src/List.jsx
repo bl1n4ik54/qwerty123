@@ -2,8 +2,8 @@ export function List({ id, isChecked, isEdit, toggleMode, editProd}) {
 	return <div>
 		Tasks: {
 			isEdit
-				? <input value={tasks} onChange={event => editProd(id, 'name', event)} />
-				: <span>{tasks}</span>
+				? <input value={text} onChange={event => editProd(text)} />
+				: <span>{text}</span>
 		}
 		<button onClick={() => toggleMode(id)}>
 			{isEdit ? 'save' : 'edit'}

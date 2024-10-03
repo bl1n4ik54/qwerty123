@@ -1,0 +1,24 @@
+.iconDelite:hover svg path {
+    stroke: red;
+}
+
+.iconChange:hover svg path {
+    stroke: green;
+}
+
+.qwerty {
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.iconChange {
+    composes: qwerty;
+}
+
+.iconDelite {
+    composes: qwerty;
+}
